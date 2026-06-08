@@ -1,0 +1,91 @@
+:root{
+    --bg:#0f1720;
+    --card:#161f2b;
+    --neon:#00ff9c;
+    --text:#e6edf3;
+}
+
+body{
+    margin:0;
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    background:var(--bg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:var(--text);
+}
+
+
+.card{
+    background:var(--card);
+    padding:35px;
+    border-radius:12px;
+    width:100%;
+    max-width:420px;
+    border:1px solid rgba(0,255,156,0.2);
+    box-shadow:0 0 25px rgba(0,255,156,0.15);
+}
+
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:var(--neon);
+    text-shadow:0 0 8px rgba(0,255,156,0.7);
+}
+
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-size:14px;
+}
+
+
+input,select{
+    width:100%;
+    padding:11px;
+    border-radius:6px;
+    border:1px solid rgba(0,255,156,0.2);
+    background:#0f1720;
+    color:var(--text);
+    outline:none;
+}
+
+input:focus,select:focus{
+    border-color:var(--neon);
+    box-shadow:0 0 6px rgba(0,255,156,0.6);
+}
+
+
+button{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:6px;
+    background:transparent;
+    color:var(--neon);
+    font-weight:bold;
+    font-size:15px;
+    cursor:pointer;
+    border:1px solid var(--neon);
+    transition:0.2s;
+}
+
+
+button:hover{
+    background:var(--neon);
+    color:#0f1720;
+    box-shadow:0 0 15px rgba(0,255,156,0.9);
+}
+
+#status{
+    margin-top:18px;
+    text-align:center;
+    font-size:14px;
+}

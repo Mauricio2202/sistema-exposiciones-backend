@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f5f5f5;
+    }
+    .container {
+      width: 320px;
+      margin: 100px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #673de6;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Registro</h2>
+  <input id="nombre" placeholder="Nombre">
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <input id="telefono" placeholder="Teléfono">
+  <input id="rol" placeholder="Rol">
+  <button onclick="register()">Registrar</button>
+</div>
+
+<script>
+function register() {
+  const nombre = document.getElementById('nombre').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const telefono = document.getElementById('telefono').value.trim();
+  const rol = document.getElementById('rol').value.trim();
+
+  if (!nombre || !email || !password || !telefono || !rol) {
+    alert('Todos los campos son obligatorios');
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('Email inválido');
+    return;
+  }
+
+  if (password.length < 6) {
+    alert('La contraseña debe tener al menos 6 caracteres');
+    return;
+  }
+
+  fetch('http://localhost:3000/api/test/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ nombre, email, password, telefono, rol })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.error) {
+      alert(data.error);
+    } else {
+      alert('Registro exitoso');
+      window.location.href = 'login.html';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

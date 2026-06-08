@@ -1,0 +1,51 @@
+2026-05-25T03:51:55.448Z | Failed login for unknown user admin from ::1
+2026-05-25T03:57:13.733Z | Failed login for unknown user profesor_test from ::1
+2026-05-25T03:58:11.424Z | Failed login for unknown user admin from ::1
+2026-05-25T04:36:06.851Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:08.673Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:09.439Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:10.067Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:10.700Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:11.049Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:11.480Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:11.700Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:11.883Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:12.059Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:12.230Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:12.374Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:12.518Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:12.669Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:12.820Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:12.981Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:13.126Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:13.283Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:13.573Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:13.754Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:13.904Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:14.098Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:15.011Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:15.311Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:15.587Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:15.885Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:16.192Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:16.496Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:16.800Z | Failed login for unknown user asdsa from ::1
+2026-05-25T04:36:17.112Z | Failed login for unknown user asdsa from ::1
+2026-05-31T16:20:52.125Z | Upload rejected: missing version from ::1 /api/exposiciones/crear
+2026-05-31T23:06:54.983Z | Upload rejected: invalid program type .html from ::1
+2026-05-31T23:09:59.591Z | Upload rejected: invalid program type .py from ::1
+2026-05-31T23:10:10.713Z | Upload rejected: missing version in filenames from ::1 /api/exposiciones/crear
+2026-05-31T23:10:46.229Z | Upload rejected: invalid program type .html from ::1
+2026-05-31T23:14:34.686Z | Upload rejected: invalid program type .html from ::1
+2026-05-31T23:14:48.872Z | Upload rejected: invalid program type .html from ::1
+2026-05-31T23:16:31.395Z | Upload rejected: invalid program type .html from ::1
+2026-05-31T23:20:08.662Z | Upload rejected: missing version in filenames from ::1 /api/exposiciones/crear
+2026-05-31T23:28:27.048Z | Failed login for user danaeromero from ::1
+2026-05-31T23:28:31.372Z | Failed login for user danaeromero from ::1
+2026-05-31T23:28:38.041Z | Failed login for user danaeromero from ::1
+2026-05-31T23:28:46.870Z | Failed login for unknown user moises from ::1
+2026-05-31T23:29:01.259Z | Failed login for user moisesaaron from ::1
+2026-05-31T23:30:05.228Z | Failed login for user moisesaaron from ::1
+2026-05-31T23:30:07.724Z | Failed login for user moisesaaron from ::1
+2026-05-31T23:30:51.582Z | Failed login for unknown user admin from ::1
+2026-05-31T23:30:57.112Z | Failed login for unknown user danae from ::1

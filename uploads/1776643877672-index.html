@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalSync Connect - Monitoreo Hospitalario</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>VitalSync Connect</h2>
+    
+    <div class="form-group">
+        <label>Nombre de la Clínica</label>
+        <select id="clinica">
+            <option value="Norte">Clínica Norte</option>
+            <option value="Sur">Clínica Sur</option>
+            <option value="Este">Clínica Este</option>
+            <option value="Oeste">Clínica Oeste</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Camas Disponibles</label>
+        <input type="number" id="camas" placeholder="Ej: 15" min="0">
+        <label>Pacientes en Espera</label>
+        <input type="number" id="pacientes" placeholder="Ej: 8" min="0">
+    </div>
+
+    <button onclick="procesarReporte()">Enviar Reporte</button>
+    
+    <div id="status"></div>
+</div>
+
+<script>
+    const SHEETSDB_URL = 'https://sheetdb.io/api/v1/im7cjd6rrbubw'; 
+    const HEALTH_API = 'https://api.mocky.io/v3/fake-endpoint-alerta'; 
+
+    async function procesarReporte() {
+        const status = document.getElementById('status');
+        const clinica = document.getElementById('clinica').value;
+        const camas = document.getElementById('camas').value;
+        const pacientes = document.getElementById('pacientes').value;
+
+        if(!camas || !pacientes) {
+            status.innerHTML = "Error: Por favor, ingresa tanto las camas como los pacientes en espera.";
+            status.style.color = "red";
+            return;
+        }
+
+        status.innerHTML = "Consultando API de Salud...";
+        status.style.color = "black";
+
+        try {
+            const nivelAlerta = "Alto"; 
+
+            status.innerHTML = "Transmitiendo datos a la nube...";
+
+            const hoy = new Date().toLocaleDateString();
+            
+            const payload = {
+                data: [
+                    {
+                        "Fecha": hoy,
+                        "Clinica": clinica,
+                        "Camas_Disponibles": camas,
+                        "Pacientes_Espera": pacientes,
+                        "Nivel_Alerta_API": nivelAlerta
+                    }
+                ]
+            };
+
+            const response = await axios.post(SHEETSDB_URL, payload);
+
+            if (response.status === 201) {
+                status.innerHTML = "Reporte enviado con éxito.";
+                status.style.color = "green";
+                
+                document.getElementById('camas').value = "";
+                document.getElementById('pacientes').value = "";
+            }
+
+        } catch (error) {
+            console.error("Error en la petición:", error);
+            status.innerHTML = "Error en la conexión. Verifica la configuración de la API.";
+            status.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
